@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Henna Tales of Saniya | Elegant Henna Art</title>
+  <meta name="description" content="Discover beautiful bridal henna, minimal mehndi and custom henna designs at Henna Tales of Saniya.">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fffaff;
+      --brown: #604653;
+      --rose: #c58aa9;
+      --lavender: #e5dafa;
+      --mint: #d9f3eb;
+      --pearl: #fff7ed;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--brown);
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--cream);
+      background-image:
+        radial-gradient(ellipse at 5% 5%, rgba(255,188,226,.65), transparent 32%),
+        radial-gradient(ellipse at 95% 12%, rgba(194,184,255,.55), transparent 32%),
+        radial-gradient(ellipse at 10% 55%, rgba(180,239,222,.45), transparent 35%),
+        radial-gradient(ellipse at 90% 75%, rgba(255,220,188,.45), transparent 35%),
+        radial-gradient(ellipse at 50% 100%, rgba(222,204,255,.48), transparent 40%);
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -50%;
+      z-index: -1;
+      pointer-events: none;
+      background: conic-gradient(
+        from 45deg,
+        rgba(255,194,230,.12),
+        rgba(193,190,255,.15),
+        rgba(179,244,222,.14),
+        rgba(255,226,192,.14),
+        rgba(255,194,230,.12)
+      );
+      filter: blur(80px);
+      animation: glow 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      to { transform: rotate(20deg) scale(1.12); }
+    }
+
+    h1, h2, h3, .brand {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    a { transition: .3s ease; }
+
+    /* Navigation */
+    .navbar {
+      background: rgba(255,250,255,.78);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid rgba(255,255,255,.9);
+      box-shadow: 0 8px 30px rgba(134,91,128,.07);
+    }
+
+    .brand {
+      color: var(--brown);
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .navbar-brand:hover { color: #b477a1; }
+
+    .nav-link {
+      color: var(--brown);
+      font-size: .85rem;
+    }
+
+    .nav-link:hover { color: #b477a1; }
+
+    .navbar-toggler {
+      border-color: rgba(150,110,145,.35);
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 .2rem rgba(197,138,169,.2);
+    }
+
+    .navbar-toggler-icon {
+      width: 1.2em;
+      height: 1.2em;
+    }
+
+    /* Pastel holographic effect */
+    .holo {
+      background: linear-gradient(
+        125deg,
+        #f9d9e9,
+        #e4dafa,
+        #d4f2e9,
+        #fff0d9,
+        #f6d9ed,
+        #dce8ff
+      );
+      background-size: 300% 300%;
+      animation: holoShift 12s ease infinite;
+    }
+
+    @keyframes holoShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .btn-holo {
+      display: inline-block;
+      padding: 13px 25px;
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 40px;
+      color: #65485c;
+      text-decoration: none;
+      background: linear-gradient(
+        110deg, #f5d8e9, #e3dafa, #d8f2e8, #ffefd9, #f3d9ef
+      );
+      background-size: 250% 250%;
+      box-shadow:
+        0 5px 20px rgba(174,125,164,.15),
+        inset 0 1px 2px rgba(255,255,255,.9);
+      transition: .3s;
+      font-size: .85rem;
+      cursor: pointer;
+    }
+
+    .btn-holo:hover {
+      background-position: 100% 50%;
+      color: #51373c;
+      transform: translateY(-3px);
+      box-shadow: 0 9px 25px rgba(174,125,164,.23);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 70px;
+    }
+
+    .eyebrow {
+      font-size: .72rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #ad7c9d;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.3rem, 7vw, 6rem);
+      line-height: 1;
+      margin: 22px 0;
+    }
+
+    .gradient-text {
+      background: linear-gradient(110deg, #b16b91, #a79ae2, #73aa9c, #d09b87);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 460px;
+      color: #856f80;
+      font-size: .9rem;
+      line-height: 1.9;
+    }
+
+    .hero-photo {
+      position: relative;
+      padding: 9px;
+      border-radius: 48% 48% 18px 18px;
+      background: linear-gradient(140deg, #f8dbea, #ded8fb, #d7f3e8, #fff0da);
+      box-shadow: 0 18px 50px rgba(119,88,110,.17);
+    }
+
+    .hero-photo img {
+      display: block;
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      border-radius: 48% 48% 12px 12px;
+    }
+
+    .floating-note {
+      position: absolute;
+      bottom: 30px;
+      left: -20px;
+      padding: 15px 22px;
+      background: rgba(255,251,255,.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid white;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(138,104,130,.12);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+      scroll-margin-top: 75px;
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .section-subtitle {
+      color: #947d8c;
+      font-size: .9rem;
+      line-height: 1.8;
+    }
+
+    /* Glass cards */
+    .service-card, .price-card, .contact-card {
+      height: 100%;
+      padding: 30px 24px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 22px;
+      background: rgba(255,252,255,.65);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow:
+        0 10px 35px rgba(147,109,150,.08),
+        inset 0 1px 0 rgba(255,255,255,.9);
+      transition: .3s;
+    }
+
+    .service-card:hover, .price-card:hover, .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(147,109,150,.15);
+    }
+
+    .service-icon {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 { font-size: 1.8rem; }
+
+    .service-card p {
+      color: #907a8b;
+      font-size: .85rem;
+      line-height: 1.8;
+    }
+
+    /* Gallery */
+    .gallery-frame {
+      overflow: hidden;
+      padding: 6px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #f7dbea, #e4dcfa, #d9f2e8, #fff0da);
+      background-size: 250% 250%;
+      animation: holoShift 12s ease infinite;
+      box-shadow: 0 10px 30px rgba(147,109,150,.12);
+    }
+
+    .gallery-img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform .4s;
+    }
+
+    .gallery-frame:hover .gallery-img {
+      transform: scale(1.04);
+    }
+
+    .gallery-caption {
+      padding: 14px 5px 4px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+    }
+
+    /* Price list */
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(210,185,208,.45);
+      font-size: .82rem;
+    }
+
+    .price-row:last-child { border-bottom: none; }
+
+    .price {
+      color: #a46e95;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    /* About */
+    .about-box {
+      padding: 42px;
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 28px;
+      background: linear-gradient(
+        125deg,
+        rgba(250,222,240,.85),
+        rgba(231,224,255,.85),
+        rgba(218,247,237,.85),
+        rgba(255,241,219,.88)
+      );
+      background-size: 250% 250%;
+      animation: holoShift 14s ease infinite;
+      box-shadow: 0 15px 40px rgba(147,109,150,.09);
+    }
+
+    .about-box p {
+      color: #806b7b;
+      line-height: 2;
+      font-size: .9rem;
+    }
+
+    /* Booking form */
+    .form-control, .form-select {
+      padding: 13px;
+      border-radius: 12px;
+      border: 1px solid rgba(214,188,210,.7);
+      background: rgba(255,253,255,.85);
+      font-size: .85rem;
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: #c9a3d3;
+      box-shadow: 0 0 0 .2rem rgba(201,163,211,.2);
+    }
+
+    .form-label {
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    #formMessage {
+      font-size: .85rem;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,.9);
+      background: rgba(255,250,255,.65);
+      backdrop-filter: blur(15px);
+      color: #987f91;
+      font-size: .8rem;
+      text-align: center;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        padding-top: 115px;
+        min-height: auto;
+      }
+
+      .hero-photo { margin: 25px 10px 0; }
+
+      .hero-photo img { height: 390px; }
+
+      .floating-note {
+        left: -8px;
+        bottom: 20px;
+      }
+
+      section { padding: 60px 0; }
+
+      .about-box { padding: 28px; }
+
+      .gallery-img { height: 300px; }
+
+      .navbar-nav { padding: 12px 0; }
+
+      .nav-item { padding: 3px 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand brand" href="#home">
+        Henna Tales of Saniya
+      </a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn-holo" href="#contact">Book now ♡</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+          <div class="eyebrow">Art • Tradition • Elegance</div>
+
+          <h1>
+            Every hand<br>
+            tells a <span class="gradient-text">story.</span>
+          </h1>
+
+          <p>
+            Welcome to Henna Tales of Saniya, where delicate
+            patterns, timeless traditions and beautiful details
+            come together to create henna art made just for you.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#gallery" class="btn-holo">Explore my art ↗</a>
+            <a href="#contact" class="btn-holo">Book your henna</a>
+          </div>
+
+          <p class="mt-4" style="font-size:.78rem">
+            ✧ Bridal henna · Minimal designs · Custom creations
+          </p>
+        </div>
+
+        <div class="col-lg-5 offset-lg-1">
+          <div class="hero-photo holo">
+            <img
+              src="./4.jpg"
+              alt="Henna art inspiration"
+              onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg?auto=compress&cs=tinysrgb&w=900'">
+
+            <div class="floating-note">Made with love ♡</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="eyebrow">What I create</div>
+        <h2 class="section-title mt-2">A little art, a lot of love</h2>
+        <p class="section-subtitle">
+          Beautiful henna for every special moment.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">✿</div>
+            <h3>Bridal Henna</h3>
+            <p>
+              Intricate patterns for your big day, designed
+              to celebrate your beautiful story.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">❀</div>
+            <h3>Minimal Henna</h3>
+            <p>
+              Delicate florals, fine lines and simple aesthetic
+              designs for everyday elegance.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">♡</div>
+            <h3>Custom Designs</h3>
+            <p>
+              Personalized patterns for festivals, celebrations,
+              guests and special occasions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="eyebrow">Henna inspiration</div>
+        <h2 class="section-title mt-2">Stories in every detail</h2>
+        <p class="section-subtitle">
+          An elegant collection of henna-inspired beauty.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4 reveal">
+          <div class="gallery-frame holo">
+            <img class="gallery-img"
+              src="./1.jpg"
+              alt="Traditional henna inspiration"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.pexels.com/photos/3997389/pexels-photo-3997389.jpeg?auto=compress&cs=tinysrgb&w=700'">
+          </div>
+          <div class="gallery-caption">Traditional elegance</div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="gallery-frame holo">
+            <img class="gallery-img"
+              src="./3.jpg"
+              alt="Bridal henna inspiration"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.pexels.com/photos/1608099/pexels-photo-1608099.jpeg?auto=compress&cs=tinysrgb&w=700'">
+          </div>
+          <div class="gallery-caption">Bridal dreams</div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="gallery-frame holo">
+            <img class="gallery-img"
+              src="./2.jpg"
+              alt="Wedding henna inspiration"
+              loading="lazy"
+              onerror="this.onerror=null;this.src='https://images.pexels.com/photos/939836/pexels-photo-939836.jpeg?auto=compress&cs=tinysrgb&w=700'">
+          </div>
+          <div class="gallery-caption">Beautiful moments</div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <!-- Replace with your Instagram profile URL -->
+        <a href="https://www.instagram.com/"
+          target="_blank" rel="noopener noreferrer"
+          class="btn-holo">
+          Find me on Instagram ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICES -->
+  <section id="prices">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="eyebrow">A little something for everyone</div>
+        <h2 class="section-title mt-2">Henna price list</h2>
+        <p class="section-subtitle">
+          Beautiful designs for every occasion.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-5 reveal">
+          <div class="price-card">
+            <h3 class="mb-3">Hand Designs</h3>
+
+            <div class="price-row">
+              <span>Minimal — one side</span>
+              <span class="price">₹100</span>
+            </div>
+            <div class="price-row">
+              <span>Minimal — both sides</span>
+              <span class="price">₹200</span>
+            </div>
+            <div class="price-row">
+              <span>Palm — one side</span>
+              <span class="price">₹200</span>
+            </div>
+            <div class="price-row">
+              <span>Wrist — one side</span>
+              <span class="price">₹250</span>
+            </div>
+            <div class="price-row">
+              <span>Bangle — one side</span>
+              <span class="price">₹300</span>
+            </div>
+            <div class="price-row">
+              <span>Half hand — one side</span>
+              <span class="price">₹400</span>
+            </div>
+            <div class="price-row">
+              <span>Elbow — one side</span>
+              <span class="price">₹600</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 reveal">
+          <div class="price-card">
+            <h3 class="mb-3">Bridal &amp; Feet</h3>
+
+            <div class="price-row">
+              <span>Simple bridal — both hands</span>
+              <span class="price">₹2,000</span>
+            </div>
+            <div class="price-row">
+              <span>Bridal hands + legs</span>
+              <span class="price">₹2,500</span>
+            </div>
+            <div class="price-row">
+              <span>Side feet — one side</span>
+              <span class="price">₹150</span>
+            </div>
+            <div class="price-row">
+              <span>Feet — one side</span>
+              <span class="price">₹200</span>
+            </div>
+            <div class="price-row">
+              <span>Ankle — one side</span>
+              <span class="price">₹300</span>
+            </div>
+            <div class="price-row">
+              <span>Above ankle — one side</span>
+              <span class="price">₹500</span>
+            </div>
+
+            <p class="mt-3 mb-0" style="font-size:.76rem;color:#987f77">
+              Final prices depend on the design and coverage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-box holo reveal">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-5">
+            <div class="eyebrow">A little about me</div>
+            <h2 class="section-title mt-3">Art that feels like you.</h2>
+          </div>
+
+          <div class="col-lg-7">
+            <p>
+              Henna Tales of Saniya is a little space dedicated
+              to the beauty of henna art. From delicate everyday
+              patterns to memorable bridal creations, every design
+              is made with patience, creativity and love.
+            </p>
+            <p class="mb-0">
+              Every line has a purpose. Every pattern tells a story.
+              Let your hands tell yours. ♡
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="contact">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="eyebrow">Let's create something beautiful</div>
+        <h2 class="section-title mt-2">Book your henna</h2>
+        <p class="section-subtitle">
+          Tell me a little about your special occasion.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-7 reveal">
+          <div class="contact-card">
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label for="customerName" class="form-label">Your name</label>
+                <input type="text" class="form-control"
+                  id="customerName" name="customerName"
+                  placeholder="Enter your name"
+                  maxlength="100" autocomplete="name" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="occasion" class="form-label">Occasion</label>
+                <select class="form-select" id="occasion" name="occasion" required>
+                  <option value="">Choose your occasion</option>
+                  <option value="Bridal henna">Bridal henna</option>
+                  <option value="Engagement">Engagement</option>
+                  <option value="Festival">Festival</option>
+                  <option value="Simple henna">Simple henna</option>
+                  <option value="Other occasion">Other occasion</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="bookingDate" class="form-label">Preferred date</label>
+                <input type="date" class="form-control"
+                  id="bookingDate" name="bookingDate" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="details" class="form-label">Design details</label>
+                <textarea class="form-control" id="details" name="details"
+                  rows="3" maxlength="1000"
+                  placeholder="Tell me about your preferred design..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-holo w-100">
+                Enquire on WhatsApp ♡
+              </button>
+
+              <p id="formMessage" class="mt-3 mb-0" role="status"
+                aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="brand mb-2">Henna Tales of Saniya</div>
+      <p class="mb-2">Crafted with love, drawn with passion ♡</p>
+      <p class="mb-0">
+        &copy; <span id="year"></span> Henna Tales of Saniya
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    "use strict";
+
+    // Automatically update the copyright year.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Prevent booking dates in the past.
+    const bookingDate = document.getElementById("bookingDate");
+
+    function setMinimumDate() {
+      const now = new Date();
+      const localDate = [
+        now.getFullYear(),
+        String(now.getMonth() + 1).padStart(2, "0"),
+        String(now.getDate()).padStart(2, "0")
+      ].join("-");
+
+      bookingDate.min = localDate;
+    }
+
+    setMinimumDate();
+
+    // Close the mobile navigation after selecting a link.
+    const navMenu = document.getElementById("navMenu");
+
+    document.querySelectorAll("#navMenu .nav-link, #navMenu .btn-holo")
+      .forEach(function (link) {
+        link.addEventListener("click", function () {
+          if (
+            window.innerWidth < 992 &&
+            navMenu.classList.contains("show")
+          ) {
+            bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+          }
+        });
+      });
+
+    // Reveal elements as they enter the screen.
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealElements.forEach(function (element) {
+        observer.observe(element);
+      });
+    } else {
+      revealElements.forEach(function (element) {
+        element.classList.add("visible");
+      });
+    }
+
+    // WhatsApp booking form.
+    document.getElementById("bookingForm").addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("customerName").value.trim();
+        const occasion = document.getElementById("occasion").value;
+        const date = bookingDate.value;
+        const details = document.getElementById("details").value.trim();
+        const message = document.getElementById("formMessage");
+
+        if (!name || !occasion || !date) {
+          message.textContent = "Please complete all required fields.";
+          message.style.color = "#a33b5c";
+          return;
+        }
+
+        // Validate date without relying only on the HTML form.
+        setMinimumDate();
+
+        if (date < bookingDate.min) {
+          message.textContent = "Please choose today or a future date.";
+          message.style.color = "#a33b5c";
+          bookingDate.focus();
+          return;
+        }
+
+        /*
+          IMPORTANT:
+          Replace 91XXXXXXXXXX with the artist's WhatsApp number.
+          Include country code; do not include +, spaces or dashes.
+          Example format for India: 919876543210
+        */
+        const whatsappNumber = "91XXXXXXXXXX";
+
+        if (!/^[1-9]\d{7,14}$/.test(whatsappNumber)) {
+          message.textContent =
+            "The booking form needs the artist's WhatsApp number configured.";
+          message.style.color = "#a33b5c";
+          return;
+        }
+
+        const formattedDate = new Date(date + "T12:00:00")
+          .toLocaleDateString("en-IN", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric"
+          });
+
+        const whatsappMessage = [
+          "Hello Henna Tales of Saniya! ♡",
+          "",
+          "I would like to enquire about a henna booking.",
+          "",
+          "Name: " + name,
+          "Occasion: " + occasion,
+          "Preferred date: " + formattedDate,
+          "Design details: " + (details || "Not specified"),
+          "",
+          "Please let me know your availability and final price."
+        ].join("\n");
+
+        const whatsappURL =
+          "https://wa.me/" + whatsappNumber +
+          "?text=" + encodeURIComponent(whatsappMessage);
+
+        message.textContent =
+          "Opening WhatsApp with your booking details...";
+        message.style.color = "#806b7b";
+
+        const newWindow = window.open(
+          whatsappURL,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+        // Fallback if the browser blocks a new tab.
+        if (!newWindow) {
+          window.location.href = whatsappURL;
+        }
+      }
+    );
+  </script>
+
+</body>
+</html>
